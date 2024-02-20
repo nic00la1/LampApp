@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - Background view for the lamp interface
 struct BackgroundView: View {
     var body: some View {
         Color("basebg")

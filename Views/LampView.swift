@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - View of lamp
 struct LampView: View {
     @State private var isLampOn = false
     @State private var dragOffset : CGSize = .zero

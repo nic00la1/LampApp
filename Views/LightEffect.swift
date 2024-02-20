@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-// MARK: - Effect of the light
+// MARK: - Light Effect for the lamp
 struct LightEffect: View {
     @Binding var opacity: Double
     var body: some View {

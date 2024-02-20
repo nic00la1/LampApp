@@ -7,12 +7,15 @@
 
 import SwiftUI
 
-// MARK: - Lamp Image
+// MARK: - Display the lamp image and its light effect
 struct LampImage: View {
     @Binding var isLampOn: Bool
     @Binding var opacity: Double
     var body: some View {
         ZStack {
+            if isLampOn {
+                LightEffect(opacity: $opacity)
+            }
             Image("lamp")
                 .resizable()
                 .scaledToFit()

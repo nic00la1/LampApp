@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// MARK: - View of lamp
+// MARK: - The main view that assembles the lamp and its interactive components
 struct LampView: View {
     @State private var isLampOn = false
     @State private var dragOffset : CGSize = .zero

@@ -11,6 +11,7 @@ import SwiftUI
 struct LampImage: View {
     @Binding var isLampOn: Bool
     @Binding var opacity: Double
+    
     var body: some View {
         ZStack {
             if isLampOn {
@@ -18,9 +19,13 @@ struct LampImage: View {
             }
             Image("lamp")
                 .resizable()
-                .scaledToFit()
+                .aspectRatio(contentMode: .fit)
                 .frame(width: 300, height: 600)
                 .offset(x: -50, y: -250)
+            if(isLampOn) {
+                OpacityControl(opacity: $opacity)
+            }
+            PowerButton(isLampOn: $isLampOn)
         }
     }
 }

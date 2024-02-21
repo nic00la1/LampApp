@@ -15,6 +15,7 @@ struct OpacityControl: View {
             Spacer()
                 .frame(height: 600)
             ZStack {
+                OpacityDisplay(opacity: $opacity)
                 Slider(value: $opacity, in: 0...0.3, step: 0.05)
                     .accentColor(.white)
 

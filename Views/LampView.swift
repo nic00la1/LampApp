@@ -17,6 +17,7 @@ struct LampView: View {
     var body: some View {
         ZStack {
             BackgroundView()
+            LampImage(isLampOn: $isLampOn, opacity: $opacity)
         }
     }
 }

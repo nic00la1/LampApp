@@ -11,12 +11,12 @@ import SwiftUI
 struct OpacityDisplay: View {
     @Binding var opacity: Double
     var body: some View {
-        Text("\(String(format: "%.2f", opacity))")
-            .foregroundStyle(.white)
-            .font(.system(size: 80))
-            .opacity(opacity + 0.4)
-            .offset(x: -60)
-    }
+            Text("\(String(format: "%.2f", opacity))")
+                .foregroundStyle(.white)
+                .font(.system(size: 80))
+                .opacity(opacity + 0.4)
+                .offset(y: -60)
+        }
 }
 
 #Preview {

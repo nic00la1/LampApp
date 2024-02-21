@@ -6,25 +6,25 @@
 //
 
 import SwiftUI
-
-// MARK: - Toggle switch to turn the lamp on and off
+//MARK: - Toggle switch to turn the lamp on and off
 struct PowerButton: View {
     @Binding var isLampOn: Bool
+
     var body: some View {
         ZStack {
             Rectangle()
                 .foregroundStyle(isLampOn ? .green : .red)
                 .frame(width: 250, height: 100)
-                .clipShape(CustomShape(corner: [.bottomRight, .topLeft], radii  : 100))
+                .clipShape(CustomShape(corner: [.bottomRight, .topLeft], radii: 100))
                 .opacity(0.1)
-            
             Text(isLampOn ? "ON" : "OFF")
-                .font(.title.bold())
+                .font(.title)
+                .fontWeight(.bold)
                 .offset(x: -40)
                 .foregroundStyle(isLampOn ? .green : .red)
         }
-        onTapGesture {
-            withAnimation {
+        .onTapGesture {
+            withAnimation{
                 isLampOn.toggle()
             }
         }

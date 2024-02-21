@@ -18,6 +18,7 @@ struct LampView: View {
         ZStack {
             BackgroundView()
             LampImage(isLampOn: $isLampOn, opacity: $opacity)
+            HandleDragView(isDragging: $isDragging, dragOffset: $dragOffset, isLampOn: $isLampOn)
         }
     }
 }
